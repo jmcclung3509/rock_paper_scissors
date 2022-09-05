@@ -1,9 +1,50 @@
 body {
-    margin: 40px;
+    background-color: #0F6DBF;
+    color: white;
+
 }
 h1{
     text-align: center;
+    width: 100%;
 }
-.computer_choice, .player_choice {
-    border: 2px
+.container{
+    background-color: #282B59;
+    margin: 40px;;
+
 }
+header {
+    display: flex;
+    justify-content: center;
+}
+.player_selection_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+.shapes_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+
+}
+.shape_container{
+    width: 30%;
+}
+.shape_container img {
+    width:80%;
+
+}
+.shape_container span, .shape_container i {
+    font-size: 12rem;
+}
+.button_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+

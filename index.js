@@ -19,6 +19,10 @@ function start(){
     computerChoiceContainer.textContent = 0
     playerChoiceContainer.textContent = 0
     roundContainer.textContent = 0
+    playerScore = 0
+    computerScore = 0
+    playerScoreContainer.textContent = playerScore
+    computerScoreContainer.textContent = computerScore
     // game()
 }
 
@@ -43,7 +47,7 @@ function getComputerChoice(){
 //  let computerSelection = getComputerChoice()
 
 
-getComputerChoice()
+// getComputerChoice()
 function randomChoice(){
     let randomIndex = Math.floor((Math.random() *3) +1)
  
@@ -57,13 +61,16 @@ function getPlayerChoice(){
 
     if (playerSelection ==  "scissors"){
         console.log(playerSelection)
+        round ++
 
      return playerSelection
 
     } else if (playerSelection =="rock") {
+        round ++
         console.log(playerSelection)
         return playerSelection
     }else if ( playerSelection == "paper"){
+        round ++
         console.log(playerSelection)
         return playerSelection
     } else {
@@ -72,19 +79,18 @@ function getPlayerChoice(){
 
 }
 
+// playerSelection = getPlayerChoice()
+// computerSelection = getComputerChoice()
 
+function playRound(){
 
-function playRound(playerSelection, computerSelection){
-    // round ++
-  
     // game()
+
    playerSelection = getPlayerChoice()
  computerSelection = getComputerChoice()
  
  computerChoiceContainer.textContent = computerSelection
  playerChoiceContainer.textContent=playerSelection
- roundContainer.innerText = round
- round ++
  roundContainer.innerText = round
     // playerSelection = getPlayerChoice()
 
@@ -142,18 +148,18 @@ function playRound(playerSelection, computerSelection){
 
 function game() {
   for (let i=0; i< 5; i++){
-
- 
 if (i <5){
-    
+    // playerSelection = getPlayerChoice()
+    // computerSelection = getComputerChoice()
+
+    // playRound(playerSelection, computerSelection)
+
+
     // playerSelection = ""
     roundContainer.textContent = round
   
-  
-  
 }else{
-    // } else {
-        // roundContainer.innerText = "Game Over"
+
         if (playerScore > computerScore){
             console.log("Player Wins")
         } else if (computerScore > playerScore){
@@ -168,19 +174,20 @@ if (i <5){
 }
 }
 function getScore(){
-    // playerSelection = ""
+    playerSelection = ""
     if (round < 5){
         computerScoreContainer.textContent = computerScore
         playerScoreContainer.textContent = playerScore
        game()
-    } else if (round == 5) {
+    } else if (round <= 5) {
         roundContainer.textContent = "Game Over"
         if (playerScore > computerScore){
             console.log("Player Wins")
-            winnerContainer.textContent = "PLAYER WINS GAME!"
+            winnerContainer.textContent = `PLAYER WINS GAME! ${playerScore} vs ${computerScore}`
         } else if (computerScore > playerScore){
             console.log ("Computer Wins")
-            winnerContainer.textContent = "COMPUTER WINS GAME!"
+            winnerContainer.textContent = `COMPUTER WINS GAME! ${computerScore} vs. ${playerScore}`
+
         } else {
             console.log("Tie")
             winnerContainer.textContent = "TIE GAME!"

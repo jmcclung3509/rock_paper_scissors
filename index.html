@@ -4,12 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/23a4783b51.js" crossorigin="anonymous"></script>
     <link rel ="stylesheet" href = "./styles/normalize.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <h1> Rock Paper Scissors</h1>
+    <div class="container">
+    <header>
+        <img src = "./images/Rock Paper Scissors-1 1 (1).png" alt = "Rock Paper Scissors Logo"/>
+    </header>
+    <main>
+        <section class = "player_selection_container">
+            <h1> Player </br> Pick your shape:</h1>
+            <div class="shapes_container">
+                <div class="shape_container ">
+                    <i class="fa fa-toilet-paper"></i>
+
+                </div>
+                <div class="shape_container ">
+                    <span class="material-symbols-outlined">
+                        content_cut
+                        </span>
+                 
+                    <!-- <a target="_blank" href="https://icons8.com/icon/BE676BWP0ogI/file"><img src = "./images/icons8-file.gif" alt = "Animated paper Icon"/> <a target="_blank" href="https://icons8.com">Icons8</a> -->
+                </div>
+                <div class="shape_container">
+                    <img src = "./images/rock_image.png" alt = "The Rock headshot"/>
+                    <!-- <div class="tenor-gif-embed" data-postid="23818297" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/rock-agreed-rock-sus-agreed-gif-23818297"></a> 
+                        <p class ="attribute" >Tenor.com</p> -->
+                </div>
+       
+
+            </div>
+            <div class="button_container">
+                <button class = "go_button">Go!</button>
+                </div>
+        </section>
+        <section class="round_container">
+            <h1> Round <span class = "round_count"></span></h1>
+            <div class="play_round_container">
+                <div class="player_round">
+                    <h3> Player</h3>
+                    <div class="player_selection"></div>
+                </div>
+            </div>
+            <div class="play_round_container">
+                <h3> Vs.</h3>
+            </div>
+            <div class="play_round_container">
+                <div class="computer_round">
+                    <h3> Computer</h3>
+                    <div class="computer_selection"></div>
+                </div>
+            </div>
+            <div class="winner_container">
+                <h3><span class = "winner"></span> Wins!</h3>
+            </div>
+        </section>
+        <section class="score_section">
+            <div class="score_container">
+                <div class="player_score"></div>
+            </div>
+            <div class="score_container">
+                <div class="score"> Score</div>
+            </div>
+            <div class="score_container">
+                <div class="computer_score"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p> Jessica Turner || 2022</p>
+    </footer>
+    <!-- <h1> Rock Paper Scissors</h1>
     <button onclick = "start()">New Game</button>
     <input type = "text" placeholder = "Enter player's choice" value="" id = "playerInput"> 
     <button onclick = "playRound()">Play Round</button>
@@ -32,7 +101,9 @@
         <h3 > Player Choice: </h3>
         <span class = "player_choice"></span>
         </div>
-        <div class = "winner"></div>
+        <div class = "winner"></div> -->
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
  <script src = "index.js"></script>   
 </body>
 </html>
