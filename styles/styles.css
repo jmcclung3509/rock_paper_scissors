@@ -4,3 +4,6 @@ body {
 h1{
     text-align: center;
 }
+.computer_choice, .player_choice {
+    border: 2px
+}

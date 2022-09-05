@@ -10,6 +10,29 @@
 </head>
 <body>
     <h1> Rock Paper Scissors</h1>
+    <button onclick = "start()">New Game</button>
+    <input type = "text" placeholder = "Enter player's choice" value="" id = "playerInput"> 
+    <button onclick = "playRound()">Play Round</button>
+    <div>
+        <h3> Round: </h3><span class = "round_container"></span></div>
+    </div>
+    <div>
+    <h3  >Computer Score: </h3>
+    <span class = "computer_score"></span>
+    </div>
+    <div>
+        <h3  >Computer Choice: </h3>
+        <span class = "computer_choice"></span>
+        </div>
+    <div>
+    <h3 > Player Score: </h3>
+    <span class = "player_score"></span>
+    </div>
+    <div>
+        <h3 > Player Choice: </h3>
+        <span class = "player_choice"></span>
+        </div>
+        <div class = "winner"></div>
  <script src = "index.js"></script>   
 </body>
 </html>
