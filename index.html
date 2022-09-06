@@ -19,18 +19,15 @@
         <section class = "player_selection_container">
             <h1> Player </br> Pick your shape:</h1>
             <div class="shapes_container">
-                <div class="shape_container ">
+                <div class="shape_container" id = "paper">
                     <i class="fa fa-toilet-paper"></i>
-
                 </div>
-                <div class="shape_container ">
+                <div class="shape_container" id = "scissor">
                     <span class="material-symbols-outlined">
                         content_cut
                         </span>
-                 
-                    <!-- <a target="_blank" href="https://icons8.com/icon/BE676BWP0ogI/file"><img src = "./images/icons8-file.gif" alt = "Animated paper Icon"/> <a target="_blank" href="https://icons8.com">Icons8</a> -->
                 </div>
-                <div class="shape_container">
+                <div class="shape_container rock-container" id = "the_rock">
                     <img src = "./images/rock_image.png" alt = "The Rock headshot"/>
                     <!-- <div class="tenor-gif-embed" data-postid="23818297" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/rock-agreed-rock-sus-agreed-gif-23818297"></a> 
                         <p class ="attribute" >Tenor.com</p> -->
@@ -39,10 +36,10 @@
 
             </div>
             <div class="button_container">
-                <button class = "go_button">Go!</button>
+                <button class = "go_button" id="go" onclick = "playRound()" >Go!</button>
                 </div>
         </section>
-        <section class="round_container">
+        <section class=" sub-container round_container">
             <h1> Round <span class = "round_count"></span></h1>
             <div class="play_round_container">
                 <div class="player_round">
@@ -59,11 +56,11 @@
                     <div class="computer_selection"></div>
                 </div>
             </div>
-            <div class="winner_container">
+            <div class=" sub-container winner_container">
                 <h3><span class = "winner"></span> Wins!</h3>
             </div>
         </section>
-        <section class="score_section">
+        <section class=" sub-container score_section">
             <div class="score_container">
                 <div class="player_score"></div>
             </div>
@@ -75,7 +72,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class = "sub-container">
         <p> Jessica Turner || 2022</p>
     </footer>
     <!-- <h1> Rock Paper Scissors</h1>

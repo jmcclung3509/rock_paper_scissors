@@ -1,10 +1,16 @@
 let playersInputField = document.getElementById("playerInput")
-let playerChoiceContainer = document.querySelector(".player_choice")
-let computerChoiceContainer = document.querySelector(".computer_choice")
+let playerChoiceContainer = document.querySelector(".player_selection")
+let computerChoiceContainer = document.querySelector(".computer_selection")
 let playerScoreContainer = document.querySelector(".player_score")
 let computerScoreContainer = document.querySelector(".computer_score")
 let roundContainer = document.querySelector(".round_container")
 let winnerContainer = document.querySelector(".winner")
+let scissorElement = document.getElementById("scissor")
+let paperElement = document.getElementById("paper")
+let rockElement = document.getElementById("the_rock")
+let goButton = document.getElementById("go")
+
+//starting values
 
 let computerObject = "rock"
 let playerScore = 0
@@ -13,7 +19,8 @@ let round = 0
 let computerSelection = ""
 let playerSelection = ""
 
-function start(){
+//reset values
+function reset(){
   
     round = 0
     computerChoiceContainer.textContent = 0
@@ -44,50 +51,57 @@ function getComputerChoice(){
     return computerObject
 
 }
-//  let computerSelection = getComputerChoice()
 
-
-// getComputerChoice()
 function randomChoice(){
     let randomIndex = Math.floor((Math.random() *3) +1)
  
     return randomIndex
 }
+scissorElement.addEventListener("click", function (){
+    console.log("click")
+    playerSelection = "scissor"
+    computerSelection = getComputerChoice()
+   playRound(playerSelection, computerSelection)
+})
 
-function getPlayerChoice(){
 
-     playerSelection =  playersInputField.value.toLowerCase().trim()
+// function getPlayerChoice(){
 
 
-    if (playerSelection ==  "scissors"){
-        console.log(playerSelection)
-        round ++
 
-     return playerSelection
 
-    } else if (playerSelection =="rock") {
-        round ++
-        console.log(playerSelection)
-        return playerSelection
-    }else if ( playerSelection == "paper"){
-        round ++
-        console.log(playerSelection)
-        return playerSelection
-    } else {
-  alert("Please enter a valid selection")
-}
+//     if (playerSelection ==  "scissors"){
+//         console.log(playerSelection)
+//         round ++
 
-}
+//      return playerSelection
+
+//     } else if (playerSelection =="rock") {
+//         round ++
+//         console.log(playerSelection)
+//         return playerSelection
+//     }else if ( playerSelection == "paper"){
+//         round ++
+//         console.log(playerSelection)
+//         return playerSelection
+// //     } else {
+// //   alert("Please enter a valid selection")
+// }
+
+// }
 
 // playerSelection = getPlayerChoice()
 // computerSelection = getComputerChoice()
 
-function playRound(){
+function playRound(playerSelection, computerSelection){
+    round ++
 
     // game()
 
-   playerSelection = getPlayerChoice()
- computerSelection = getComputerChoice()
+//    playerSelecgit tion = getPlayerChoice()
+//  computerSelection = getComputerChoice()
+ console.log(playerSelection, computerSelection)
+ 
  
  computerChoiceContainer.textContent = computerSelection
  playerChoiceContainer.textContent=playerSelection
@@ -97,8 +111,11 @@ function playRound(){
     
    
     console.log(round)
+    if (playerSelection == "") {
+        alert ("Please pick an object")
+    
 
-    if (playerSelection == "rock" && computerSelection == "rock"){
+ }else if (playerSelection == "rock" && computerSelection == "rock"){
         computerScore++ && playerScore++
         getScore()
         return "It's a tie"
@@ -149,13 +166,7 @@ function playRound(){
 function game() {
   for (let i=0; i< 5; i++){
 if (i <5){
-    // playerSelection = getPlayerChoice()
-    // computerSelection = getComputerChoice()
 
-    // playRound(playerSelection, computerSelection)
-
-
-    // playerSelection = ""
     roundContainer.textContent = round
   
 }else{

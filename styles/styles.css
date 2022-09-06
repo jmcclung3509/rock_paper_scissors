@@ -7,6 +7,7 @@ h1{
     text-align: center;
     width: 100%;
 }
+
 .container{
     background-color: #282B59;
     margin: 40px;;
@@ -25,26 +26,78 @@ header {
     margin: auto;
 }
 .shapes_container{
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
 
 }
 .shape_container{
-    width: 30%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #14D945;
+    border-radius: 12px;
+
+
 }
+
 .shape_container img {
-    width:80%;
+    width:100%;
+    border-radius: 10px;
 
 }
 .shape_container span, .shape_container i {
-    font-size: 12rem;
+    font-size: 6rem;
 }
 .button_container {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 40px auto;
+}
+.go_button {
+    padding: 12px 24px;
+    border: 2px solid #14D945;
+    background-color: transparent;
+    border-radius: 12px;
+    color: #14D945;
+    font-size: 20px;
+    font-weight: bold;
 }
 
+.sub-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-bottom: 40px;
+    gap: 20px;
+}
 
+.winner_container {
+    width: 100%;
+
+}
+.score_section {
+    width: 60%;
+    border: 2px solid #14D945;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    
+
+}
+.score {
+    font-size: 1.5rem;
+    color: #14D945;
+}
+footer {
+    margin-top: 40px;
+}
+footer p {
+    font-size: .75rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
