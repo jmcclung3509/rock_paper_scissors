@@ -1,21 +1,37 @@
 body {
     background-color: #0F6DBF;
     color: white;
+    font-family: 'Open Sans', sans-serif;
 
 }
-h1{
+h1, h2{
     text-align: center;
     width: 100%;
+
 }
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 40px;
+}
+h2 {
+    margin-top: 0;
+}
+
 
 .container{
     background-color: #282B59;
-    margin: 40px;;
+    margin: 40px 40px 20px;
+    padding-bottom: 40px;
 
 }
 header {
     display: flex;
     justify-content: center;
+}
+header img {
+    width: 50%;
 }
 .player_selection_container {
     display: flex;
@@ -32,6 +48,7 @@ header {
     flex-flow: row wrap;
 
 }
+
 .shape_container{
     width: 25%;
     display: flex;
@@ -39,23 +56,23 @@ header {
     align-items: center;
     border: 2px solid #14D945;
     border-radius: 12px;
-
-
 }
 
 .shape_container img {
     width:100%;
     border-radius: 10px;
-
 }
 .shape_container span, .shape_container i {
     font-size: 6rem;
+}
+.shape_container:hover{
+    border: 6px solid #14D945;
 }
 .button_container {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 40px auto;
+    margin: 20px auto;
 }
 .go_button {
     padding: 12px 24px;
@@ -72,18 +89,54 @@ header {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     gap: 20px;
+}
+.round_container {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+
+
+}
+.play_round_container h3 {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.object_image_container{
+    width: 100px;
+    height: 100px;
+
+}
+.paper_gif, .scissors_gif, .rock-gif {
+    width: 100%;
+}
+.rock-gif {
+    border : none !important;
+    width: 125%;
+    height: 125%;
 }
 
 .winner_container {
     width: 100%;
+    text-align: center;
+
 
 }
+.winner_text {
+    font-size: 1.2rem;
+}
+.winner_text span {
+    color: #14D945;
+}
+
 .score_section {
     width: 60%;
     border: 2px solid #14D945;
     margin: auto;
+    padding-bottom: 40px;
     padding: 20px;
     border-radius: 12px;
     
@@ -93,11 +146,15 @@ header {
     font-size: 1.5rem;
     color: #14D945;
 }
-footer {
-    margin-top: 40px;
-}
+
 footer p {
     font-size: .75rem;
     padding-bottom: 0;
     margin-bottom: 0;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: flex;
 }
