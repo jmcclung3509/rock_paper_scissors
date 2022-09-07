@@ -42,15 +42,13 @@ let playerSelection = ""
 function reset(){
   
     round = 0
-    computerChoiceContainer.textContent = 0
-    playerChoiceContainer.textContent = 0
-    roundContainer.textContent = 0
+
+    roundContainer.textContent = ""
     playerScore = 0
     computerScore = 0
     playerScoreContainer.textContent = playerScore
     computerScoreContainer.textContent = computerScore
     winnerContainer.innerHTML = ""
-    gameWinnerContainer.innerHTML = ""
   if (goButton.classList.contains("show")){
       goButton.classList.remove("show")
       goButton.classList.add("hide")
@@ -258,7 +256,7 @@ function getScore(){
 }
 function gameOver(playerScore, computerScore) {
     roundContainer.textContent = "Game Over"
-
+    winnerContainer.innerHTML = '<p></p>'
     if (Number(playerScore) > Number(computerScore)){
         console.log("player wins")
         gameWinnerContainer.innerHTML = `<h2> PLAYER WINS GAME </h2> `
