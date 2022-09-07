@@ -133,7 +133,7 @@ if (round <= 5){
         computerScore++
         playerScore++
         getScore()
-        winnerContainer.innerHTML = '<p class ="winner_text">Tie Round<span>Rock & Rock</span></p>'  
+        winnerContainer.innerHTML = '<p class ="winner_text">Tie Round</br><span>Rock & Rock</span></p>'  
         getPlayerImage(playerSelection)
       getComputerImage(computerSelection)
 
@@ -155,7 +155,7 @@ if (round <= 5){
         computerScore++ 
          playerScore++
         getScore()
-        winnerContainer.innerHTML = '<p class ="winner_text">Tie Round<span>Paper & Paper</span></p>'
+        winnerContainer.innerHTML = '<p class ="winner_text">Tie Round</br><span>Paper & Paper</span></p>'
         getPlayerImage(playerSelection)
       getComputerImage(computerSelection)
 
@@ -177,7 +177,7 @@ if (round <= 5){
         computerScore++ 
         playerScore++
         getScore()
-        winnerContainer.innerHTML = '<p class ="winner_text">Tie Round<span>Scissors & Scissors</span></p>'
+        winnerContainer.innerHTML = '<p class ="winner_text">Tie Round</br><span>Scissors & Scissors</span></p>'
         getPlayerImage(playerSelection)
         getComputerImage(computerSelection)
 

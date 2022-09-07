@@ -42,7 +42,7 @@ header img {
     margin: auto;
 }
 .shapes_container{
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
@@ -56,6 +56,7 @@ header img {
     align-items: center;
     border: 2px solid #14D945;
     border-radius: 12px;
+    height: fit-content;
 }
 
 .shape_container img {
@@ -63,7 +64,7 @@ header img {
     border-radius: 10px;
 }
 .shape_container span, .shape_container i {
-    font-size: 6rem;
+    font-size: 5rem;
 }
 .shape_container:hover{
     border: 6px solid #14D945;
@@ -93,21 +94,31 @@ header img {
     gap: 20px;
 }
 .round_container {
-    width: 60%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: auto;
 
 
 }
+.play_round_container {
+    display: flex;
+    justify-content:  center;
+    margin: auto;
+    width: 100%;
+    
+}
 .play_round_container h3 {
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+  
 }
+
 .object_image_container{
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    /* height: 25% */
 
 }
 .paper_gif, .scissors_gif, .rock-gif {
@@ -119,10 +130,11 @@ header img {
     height: 100%;
 }
 .rock-gif {
-    width: 125%;
+    width: 100%;
     height: fit-content;
     border : none !important;
 }
+
 
 .winner_container {
     width: 100%;
@@ -130,6 +142,7 @@ header img {
 
 
 }
+
 .winner_text {
     font-size: 1.2rem;
     margin: 15px 0;
@@ -164,4 +177,33 @@ footer p {
 }
 .show {
     display: flex;
+}
+@media only screen and (min-width: 650px) {
+    .shape_container span, .shape_container i {
+        font-size: 6rem;
+    }
+    .shapes_container {
+        width: 60%;
+    }
+    .round_container {
+        width: 60%;
+        justify-content: space-around;
+}
+.play_round_container h3 {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  
+}
+.play_round_container {
+    width: 30%;
+}
+.object_image_container{
+    width: 100%;
+    /* height: 25% */
+
+}
+.rock-gif {
+    width: 125%;
+}
 }
