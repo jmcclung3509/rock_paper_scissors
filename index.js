@@ -42,7 +42,7 @@ let playerSelection = ""
 function reset(){
   
     round = 0
-
+    gameWinnerContainer.innerHTML='<p></p>'
     roundContainer.textContent = ""
     playerScore = 0
     computerScore = 0
@@ -216,20 +216,21 @@ if (i <5 || i == 0){
 function getPlayerImage(playerSelection) {
     console.log(playerSelection)
     if (playerSelection == "scissors") {
-        playerImgContainer.innerHTML = '<img class = "scissors_gif" src = "./images/scissors.gif" alt = "scissors gif" />'   
+        playerImgContainer.innerHTML = '<iframe src="https://giphy.com/embed/ujH30A5YftV0Z0gvs0"  style= frameBorder="0" class="scissor_gif" ></iframe>' 
+        // '<img class = "scissors_gif" src = "./images/scissors.gif" alt = "scissors gif" />'   
     } else if (playerSelection =="paper"){
         playerImgContainer.innerHTML = '<img class = "paper_gif" src = "./images/1391-paper-waste-lineal.gif" alt = "paper GIF">'
     } else if (playerSelection =="rock") {
-        playerImgContainer.innerHTML = '<iframe src="https://giphy.com/embed/uXQIwlDNzytyg" style="frameBorder="0" class="rock-gif"></iframe>'
+        playerImgContainer.innerHTML = '<iframe src="https://giphy.com/embed/xUOxf34uHq8VolxF7y" style="frameBorder="0" class="rock-gif"></iframe>'
     }
 }
 function getComputerImage(computerSelection){
         if (computerSelection == "scissors") {
-            computerImgContainer.innerHTML = '<img class = "scissors_gif" src = "./images/scissors.gif" alt = "scissors gif" />'    
+            computerImgContainer.innerHTML = '<iframe src="https://giphy.com/embed/ujH30A5YftV0Z0gvs0" style= frameBorder="0" class="scissor_gif" allowFullScreen></iframe>' 
         } else if (computerSelection =="paper"){
             computerImgContainer.innerHTML = '<img class = "paper_gif" src = "./images/1391-paper-waste-lineal.gif" alt = "paper GIF">'
         } else if (computerSelection == "rock"){
-            computerImgContainer.innerHTML = '<iframe src="https://giphy.com/embed/uXQIwlDNzytyg" style="frameBorder="0" class="rock-gif"></iframe>'
+            computerImgContainer.innerHTML = '<iframe src="https://giphy.com/embed/14smAwp2uHM3Di" style="frameBorder="0" class="rock-gif"></iframe>'
         }
     }
 

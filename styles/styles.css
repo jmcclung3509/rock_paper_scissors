@@ -93,7 +93,7 @@ header img {
     gap: 20px;
 }
 .round_container {
-    width: 40%;
+    width: 60%;
     display: flex;
     justify-content: space-around;
     margin: auto;
@@ -113,10 +113,15 @@ header img {
 .paper_gif, .scissors_gif, .rock-gif {
     width: 100%;
 }
-.rock-gif {
+.scissor_gif{
     border : none !important;
+    width: 100%;
+    height: 100%;
+}
+.rock-gif {
     width: 125%;
-    height: 125%;
+    height: fit-content;
+    border : none !important;
 }
 
 .winner_container {
@@ -127,6 +132,8 @@ header img {
 }
 .winner_text {
     font-size: 1.2rem;
+    margin: 15px 0;
+    line-height: 1.8;
 }
 .winner_text span {
     color: #14D945;
