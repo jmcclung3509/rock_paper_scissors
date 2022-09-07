@@ -130,9 +130,10 @@ if (round <= 5){
 
 
  if (playerSelection == "rock" && computerSelection == "rock"){
-        computerScore++ && playerScore++
+        computerScore++
+        playerScore++
         getScore()
-        winnerContainer.innerHTML = '<p class ="winner_text"><span>It is a tie</span></p>'  
+        winnerContainer.innerHTML = '<p class ="winner_text">Tie Round<span>Rock & Rock</span></p>'  
         getPlayerImage(playerSelection)
       getComputerImage(computerSelection)
 
@@ -151,9 +152,10 @@ if (round <= 5){
         getComputerImage(computerSelection)
 
     } else if (playerSelection == "paper" && computerSelection =="paper"){
-        computerScore++ && playerScore++
+        computerScore++ 
+         playerScore++
         getScore()
-        winnerContainer.innerHTML = '<p class ="winner_text"><span>It is a tie</span></p>'
+        winnerContainer.innerHTML = '<p class ="winner_text">Tie Round<span>Paper & Paper</span></p>'
         getPlayerImage(playerSelection)
       getComputerImage(computerSelection)
 
@@ -172,9 +174,10 @@ if (round <= 5){
        getComputerImage(computerSelection)
 
     } else if (playerSelection =="scissors" && computerSelection =="scissors"){
-        computerScore++ && playerScore++
+        computerScore++ 
+        playerScore++
         getScore()
-        winnerContainer.innerHTML = '<p class ="winner_text"><span>It is a tie</span></p>'
+        winnerContainer.innerHTML = '<p class ="winner_text">Tie Round<span>Scissors & Scissors</span></p>'
         getPlayerImage(playerSelection)
         getComputerImage(computerSelection)
 
@@ -226,7 +229,7 @@ function getPlayerImage(playerSelection) {
 }
 function getComputerImage(computerSelection){
         if (computerSelection == "scissors") {
-            computerImgContainer.innerHTML = '<iframe src="https://giphy.com/embed/ujH30A5YftV0Z0gvs0" style= frameBorder="0" class="scissor_gif" allowFullScreen></iframe>' 
+            computerImgContainer.innerHTML = '<iframe src="https://giphy.com/embed/ujH30A5YftV0Z0gvs0" style= frameBorder="0" class="scissor_gif" ></iframe>' 
         } else if (computerSelection =="paper"){
             computerImgContainer.innerHTML = '<img class = "paper_gif" src = "./images/1391-paper-waste-lineal.gif" alt = "paper GIF">'
         } else if (computerSelection == "rock"){
