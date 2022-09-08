@@ -2,7 +2,8 @@ body {
     background-color: #0F6DBF;
     color: white;
     font-family: 'Open Sans', sans-serif;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
 
 }
 h1, h2{
@@ -30,8 +31,9 @@ h3 {
 .container{
     background-color: #282B59;
     width: 90%;
-    margin: 40px auto;
+    margin: 40px auto 0;
     height: 95%;
+    padding-bottom: 20px;
 }
 header {
     display: flex;
@@ -108,7 +110,7 @@ header img {
     gap: 20px;
 }
 .round_container {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -119,7 +121,7 @@ header img {
     display: flex;
     justify-content:  center;
     margin: 0 auto;
-    width: 100%;
+    width: 35%;
     
 }
 .play_round_container h3 {
@@ -128,6 +130,9 @@ header img {
     align-items: center;
     justify-content: center;
   
+}
+.vs_container {
+    width: 10%;
 }
 
 .object_image_container{
