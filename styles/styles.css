@@ -2,6 +2,7 @@ body {
     background-color: #0F6DBF;
     color: white;
     font-family: 'Open Sans', sans-serif;
+    height: 100vh;
 
 }
 h1, h2{
@@ -14,25 +15,37 @@ h1 {
     font-size: 3rem;
     font-weight: bold;
     padding: 40px;
+    margin: 0;
 }
 h2 {
+    margin-top: 0;
+    line-height: 1.5;
+    margin-bottom: 0
+}
+h3 {
     margin-top: 0;
 }
 
 
 .container{
     background-color: #282B59;
-    margin: 40px 40px 20px;
-    padding-bottom: 40px;
-
+    width: 90%;
+    margin: 40px auto;
+    height: 95%;
 }
 header {
     display: flex;
     justify-content: center;
 }
+
 header img {
     width: 50%;
 }
+
+.player-title {
+    margin-bottom: 40px;
+}
+
 .player_selection_container {
     display: flex;
     justify-content: center;
@@ -57,6 +70,7 @@ header img {
     border: 2px solid #14D945;
     border-radius: 12px;
     height: fit-content;
+    aspect-ratio: 1;
 }
 
 .shape_container img {
@@ -104,7 +118,7 @@ header img {
 .play_round_container {
     display: flex;
     justify-content:  center;
-    margin: auto;
+    margin: 0 auto;
     width: 100%;
     
 }
@@ -139,13 +153,12 @@ header img {
 .winner_container {
     width: 100%;
     text-align: center;
-
-
+    margin: 0;
 }
 
 .winner_text {
     font-size: 1.2rem;
-    margin: 15px 0;
+    margin:  0;
     line-height: 1.8;
 }
 .winner_text span {
@@ -166,7 +179,11 @@ header img {
     font-size: 1.5rem;
     color: #14D945;
 }
-
+footer {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 10px;
+}
 footer p {
     font-size: .75rem;
     padding-bottom: 0;
@@ -179,31 +196,36 @@ footer p {
     display: flex;
 }
 @media only screen and (min-width: 650px) {
+    .container {
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .shape_container span, .shape_container i {
         font-size: 6rem;
     }
     .shapes_container {
-        width: 60%;
+        width: 80%;
     }
     .round_container {
         width: 60%;
         justify-content: space-around;
-}
-.play_round_container h3 {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-  
-}
-.play_round_container {
-    width: 30%;
-}
-.object_image_container{
-    width: 100%;
-    /* height: 25% */
+    }
+    .play_round_container h3 {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    
+    }
+    .play_round_container {
+        width: 30%;
+    }
+    .object_image_container{
+        width: 100%;
+        /* height: 25% */
 
-}
-.rock-gif {
-    width: 125%;
-}
+    }
+    .rock-gif {
+        width: 125%;
+    }
 }
