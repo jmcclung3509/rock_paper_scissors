@@ -49,6 +49,8 @@ function reset(){
     playerScoreContainer.textContent = playerScore
     computerScoreContainer.textContent = computerScore
     winnerContainer.innerHTML = ""
+    computerImgContainer.innerHTML=""
+    playerImgContainer.innerHTML = ""
   if (goButton.classList.contains("show")){
       goButton.classList.remove("show")
       goButton.classList.add("hide")
