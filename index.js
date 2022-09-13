@@ -36,11 +36,12 @@ let computerScore = 0
 let round = ""
 let computerSelection = ""
 let playerSelection = ""
+let isGameOver = false
 
 
 //reset values
 function reset(){
-  
+    isGameOver == false
     round = 0
     gameWinnerContainer.innerHTML='<p></p>'
     roundContainer.textContent = ""
@@ -85,7 +86,7 @@ function randomChoice(){
 
 //get player choice
 scissorElement.addEventListener("click", function (){
-    if (round>=0 && round < 5){
+    if (round>=0 && isGameOver == false){
     playerImgContainer.innerHTML = ""
     computerImgContainer.innerHTML = ""
     playerSelection = "scissors"
@@ -95,7 +96,7 @@ scissorElement.addEventListener("click", function (){
 
 }})
 paperElement.addEventListener("click", function (){
-    if (round>=0 && round < 5){
+    if (round>=0 && isGameOver == false){
     playerImgContainer.innerHTML = ""
     computerImgContainer.innerHTML = ""
     playerSelection = "paper"
@@ -105,7 +106,7 @@ paperElement.addEventListener("click", function (){
 
 }})
 rockElement.addEventListener("click", function (){
-    if (round>=0 && round < 5){
+    if (round>=0 && isGameOver == false){
     playerImgContainer.innerHTML = ""
     computerImgContainer.innerHTML = ""
     console.log("click")
@@ -122,7 +123,7 @@ rockElement.addEventListener("click", function (){
 
 function playRound(playerSelection, computerSelection){
     console.log(round)
-if (round <= 5){
+if (isGameOver == false){
 
     round ++
  
@@ -198,7 +199,7 @@ if (round <= 5){
     }
 
     
-} else if (round = 5){
+} else if (isGameOver == true){
     reset()
 
    
@@ -209,15 +210,15 @@ if (round <= 5){
 
 
 function game() {
-  for (let i=0; i< 5; i++){
-if (i <5 || i == 0){
+  for (let i=0; i< 10; i++){
+if (isGameOver == false){
     roundContainer.textContent = `Round ${round}`
 } else {
     winnerContainer.textContent = ""
     getScore()
 }
-}
-}
+}}
+
 function getPlayerImage(playerSelection) {
     console.log(playerSelection)
     if (playerSelection == "scissors") {
@@ -241,11 +242,12 @@ function getComputerImage(computerSelection){
 
 function getScore(){
 
-    if (round <5){
+    if (playerScore < 5 && computerScore < 5){
         computerScoreContainer.textContent = computerScore
         playerScoreContainer.textContent = playerScore
        game()
-    } else if (round  = 5) {
+    } else if ( playerScore === 5 || computerScore === 5) {
+        isGameOver == true
         computerScoreContainer.textContent = computerScore
         playerScoreContainer.textContent = playerScore
         winnerContainer.textContent = ""
